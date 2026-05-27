@@ -2,61 +2,74 @@
 body {
     background-color: #36393f;
     color: #ffffff;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding: 20px;
 }
 
 .container {
-    width: 400px;
+    width: 100%;
+    max-width: 500px;
     background: #2f3136;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-h1 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #b9bbbe;
-}
+h1 { font-size: 20px; text-align: center; color: #b9bbbe; margin-bottom: 20px; }
 
 label {
     display: block;
     font-size: 12px;
     font-weight: bold;
     color: #8e9297;
+    margin-top: 15px;
     margin-bottom: 5px;
-    margin-top: 10px;
 }
 
 input, select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background: #202225;
     border: 1px solid #202225;
     color: #dcddde;
     border-radius: 4px;
-    box-sizing: border-box; /* Ensures padding doesn't break layout */
+    box-sizing: border-box;
 }
 
-#output {
-    font-size: 22px;
+/* Generator List Layout */
+#generator-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.font-card {
+    background: #36393f;
     padding: 15px;
-    background: #202225;
-    border: 1px solid #2f3136;
-    border-radius: 4px;
-    margin-top: 20px;
-    text-align: center;
-    color: #ffffff;
+    border-radius: 5px;
     cursor: pointer;
-    min-height: 30px;
-    word-break: break-all;
+    border: 1px solid #202225;
+    transition: all 0.2s ease;
 }
 
-#output:hover {
-    background: #292b2f;
+.font-card:hover {
     border-color: #7289da;
+    background: #393c43;
+}
+
+.font-card span {
+    font-size: 10px;
+    color: #72767d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.result {
+    font-size: 20px;
+    margin-top: 8px;
+    color: #ffffff;
+    word-break: break-all;
 }
