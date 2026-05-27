@@ -3,9 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Discord Aesthetic Generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <div class="container">
+        <h1>Discord Text Generator</h1>
+        
+        <div class="input-group">
+            <label for="input">Text Input</label>
+            <input type="text" id="input" placeholder="Type your text here..." oninput="update()">
+        </div>
+
+        <div class="controls">
+            <div class="control-item">
+                <label for="fontSelect">Style</label>
+                <select id="fontSelect" onchange="update()">
+                    <option value="typewriter">Typewriter</option>
+                    <option value="premium">Premium</option>
+                    <option value="smallcaps">Small Caps</option>
+                </select>
+            </div>
+
+            <div class="control-item">
+                <label for="sepSelect">Separator</label>
+                <select id="sepSelect" onchange="update()">
+                    <option value="│">│</option><option value="┃">┃</option><option value="╽">╽</option>
+                    <option value="╿">╿</option><option value="╏">╏</option><option value="║">║</option>
+                    <option value="╎">╎</option><option value="┇">┇</option><option value="︱">︱</option>
+                    <option value="┊">┊</option><option value="︳">︳</option><option value="┋">┋</option>
+                    <option value="┆">┆</option><option value="〡">〡</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="result-area">
+            <p>Click the box below to copy:</p>
+            <div id="output" onclick="copyText()">Result will appear here</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
